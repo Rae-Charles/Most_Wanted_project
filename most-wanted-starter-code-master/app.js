@@ -4,7 +4,8 @@
 //Menu functions.
 //Used for the overall flow of the application.
 /////////////////////////////////////////////////////////////////
-//#region 
+
+
 
 // app is the function called to start the entire application
 function app(people){
@@ -25,6 +26,7 @@ function app(people){
   }
   mainMenu(searchResults, people)
 }
+
 
 // Menu function to call once you find who you are looking for
 function mainMenu(person, people){
@@ -58,6 +60,7 @@ function mainMenu(person, people){
   }
 }
 
+
 function searchByTrait(people){
   let userInput = promptFor("Would you like to search by eye color, gender, height, weight or occupation?", autoValid).toLowerCase();
   let resultTrait = "";
@@ -86,6 +89,7 @@ function searchByTrait(people){
       searchByTrait(people); // ask again if need be
     }
 }
+
 
 function onePerson(searchResults, people) {
   if (searchResults.length == 1) {
@@ -134,6 +138,7 @@ function searchByEyeColor(people){
   return foundPerson;
 }
 
+
 function searchByHeight(people){
     let height = promptFor("What is the person's height?", autoValid);
 
@@ -147,6 +152,7 @@ function searchByHeight(people){
   })
   return foundPerson;
 }
+
 
 function searchByWeight(people){
     let weight = promptFor("What is the person's weight?", autoValid);
@@ -165,6 +171,7 @@ else{
   return foundPerson;
 }
 
+
 function searchByGender(people){
     let gender = promptFor("What is the person's gender?", autoValid).toLowerCase();
 
@@ -178,6 +185,7 @@ function searchByGender(people){
   })
   return foundPerson;
 }
+
 
 function searchByOccupation(people){
   let occupation = promptFor("What is the person's occupation?", autoValid).toLowerCase();
@@ -207,6 +215,7 @@ function displayPeople(people){
   }).join("\n"));
 }
 
+
 function displayPerson(person){
   let firstName = "First Name: " + person[0].firstName; 
   let lastName =  "Last Name: " + person[0].lastName;
@@ -219,6 +228,7 @@ function displayPerson(person){
   alert(firstName+'\n'+lastName+'\n'+gender+'\n'+dob+'\n'+height+'\n'+weight+'\n'+eyeColor+'\n'+occupation);
 }
 
+
 function displayFamily(person, people){
   let parentsFound = findParents(person, people);
   let parent1 = "First parent: " + parentsFound[0].firstName + " " + parentsFound[0].lastName;
@@ -227,6 +237,7 @@ function displayFamily(person, people){
   let currentSpouse = "Current Spouse: " + spouseFound[0].firstName + " " + spouseFound[0].lastName;
   alert(parent1+'\n'+parent2+'\n'+currentSpouse+'\n');
 }
+
 
 function displayDescendants(person, people){
   let descendantsFound = findDescendants(person, people);
@@ -242,6 +253,7 @@ function displayDescendants(person, people){
   }
 }
 
+
 function findSpouse(person, people) {
   var person = person;
   let foundSpouse = people.filter(function(element){
@@ -254,6 +266,7 @@ function findSpouse(person, people) {
 return foundSpouse
 }
 
+
 function findParents(person, people) {
   var person = person;
   let foundParents = people.filter(function(element){
@@ -265,6 +278,7 @@ function findParents(person, people) {
   })
 return foundParents
 }
+
 
 function findDescendants(person, people){
   var person = person;
