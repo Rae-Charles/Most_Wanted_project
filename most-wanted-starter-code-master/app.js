@@ -6,7 +6,7 @@
 
 // app is the function called to start the entire application
 function app(people){
-  let searchType = promptFor("Do you know the name of the person you are looking for? Please enter 'yes' or 'no'", yesNo).toLowerCase();
+  let searchType = promptFor("Do you know the name of the person you are looking for? Please enter 'yes' or 'no'.", yesNo).toLowerCase();
   let searchResults;
   switch(searchType){
     case 'yes':
@@ -35,7 +35,7 @@ function mainMenu(person, people){
     return app(people); // restart
   }
 
-  let displayOption = promptFor("Found " + person[0].firstName + " " + person[0].lastName + " . Do you want to know their 'info', 'family', or 'descendants'? Type the option you want or 'restart' or 'quit'", autoValid);
+  let displayOption = promptFor("Found " + person[0].firstName + " " + person[0].lastName + " . Do you want to know their 'info', 'family', or 'descendants'? Type the option you want or 'restart' or 'quit'.", autoValid);
 
   switch(displayOption){
     case "info":
