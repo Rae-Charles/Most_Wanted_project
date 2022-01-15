@@ -92,7 +92,7 @@ function onePerson(searchResults, people) {
   if (searchResults.length == 1) {
         mainMenu(searchResults, people)   
   } else { 
-      alert("Your search includes multiple people, re-directing to filter by traits.");
+      alert("Your search produced multiple people, re-directing to filter by traits.");
       searchByTrait(searchResults)
     }
   }
