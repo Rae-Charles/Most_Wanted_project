@@ -173,7 +173,7 @@ else{
 
 
 function searchByGender(people){
-    let gender = promptFor("What is the person's gender?", autoValid).toLowerCase();
+    let gender = promptFor("Please enter the person's gender?", autoValid).toLowerCase();
 
     let foundPerson = people.filter(function(potentialMatch){
       if(potentialMatch.gender === gender){
