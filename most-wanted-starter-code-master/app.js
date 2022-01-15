@@ -1,10 +1,7 @@
 "use strict"
-
-
 //Menu functions.
 //Used for the overall flow of the application.
 /////////////////////////////////////////////////////////////////
-
 
 
 // app is the function called to start the entire application
@@ -162,7 +159,6 @@ function searchByWeight(people){
       if(potentialMatch.weight == weight){
         return true;
       }
-      
 else{
         return false;
       }
