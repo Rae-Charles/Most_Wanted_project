@@ -183,7 +183,7 @@ function searchByGender(people){
 
 
 function searchByOccupation(people){
-  let occupation = promptFor("What is the person's occupation?", autoValid).toLowerCase();
+  let occupation = promptFor("Please enter the person's occupation.", autoValid).toLowerCase();
 
   let foundPerson = people.filter(function(potentialMatch){
     if(potentialMatch.occupation === occupation){
