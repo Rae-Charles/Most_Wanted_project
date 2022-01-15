@@ -101,7 +101,6 @@ function onePerson(searchResults, people) {
 //Ideally you will have a function for each trait.
 /////////////////////////////////////////////////////////////////
 
-
 //nearly finished function used to search through an array of people to find matching first and last name and return a SINGLE person object.
 function searchByName(people){
   let firstName = promptFor("What is the person's first name?", autoValid).toLowerCase();
@@ -199,10 +198,10 @@ function searchByOccupation(people){
 
 //#endregion
 
+
 //Display functions.
 //Functions for user interface.
 /////////////////////////////////////////////////////////////////
-
 
 // alerts a list of people
 function displayPeople(people){
