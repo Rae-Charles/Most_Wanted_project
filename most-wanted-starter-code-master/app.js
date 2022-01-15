@@ -152,7 +152,7 @@ function searchByHeight(people){
 
 
 function searchByWeight(people){
-    let weight = promptFor("What is the person's weight in lbs.", autoValid);
+    let weight = promptFor("What is the person's weight in lbs?", autoValid);
 
     let foundPerson = people.filter(function(potentialMatch){
       //if(weight < people.weight - 5 && weight > people.weight + 5){  
@@ -169,7 +169,7 @@ else{
 
 
 function searchByGender(people){
-    let gender = promptFor("Please enter the person's gender?", autoValid).toLowerCase();
+    let gender = promptFor("Please enter the person's gender.", autoValid).toLowerCase();
 
     let foundPerson = people.filter(function(potentialMatch){
       if(potentialMatch.gender === gender){
