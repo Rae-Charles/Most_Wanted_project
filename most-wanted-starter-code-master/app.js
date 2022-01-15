@@ -125,7 +125,7 @@ function searchByName(people){
 
 //unfinished function to search through an array of people to find matching eye colors. Use searchByName as reference.
 function searchByEyeColor(people){
-    let eyeColor = promptFor("What is the person's eye color?", autoValid).toLowerCase();
+    let eyeColor = promptFor("What is the person's eye color? Please enter it now.", autoValid).toLowerCase();
 
     let foundPerson = people.filter(function(potentialMatch){
       if(potentialMatch.eyeColor === eyeColor){
